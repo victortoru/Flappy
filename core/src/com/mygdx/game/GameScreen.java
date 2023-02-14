@@ -25,6 +25,7 @@ public class GameScreen implements Screen {
     public GameScreen(final Bird gam) {
         this.game = gam;
 
+
         // create the camera and the SpriteBatch
         camera = new OrthographicCamera();
         camera.setToOrtho(false, 800, 480);
@@ -134,7 +135,7 @@ public class GameScreen implements Screen {
         game.batch.end();
 
         //La puntuació augmenta amb el temps de joc
-        score += Gdx.graphics.getDeltaTime();
+
 
         game.lastScore = (int)score;
         if(game.lastScore > game.topScore)
